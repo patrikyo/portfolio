@@ -7,17 +7,17 @@ const Header = () => {
         <ul className={styles.listContainer}>
           <li>
             <a href="#" className={styles.link}>
-              About me
+              <span className={styles.linkText}>About me</span>
             </a>
           </li>
           <li>
             <a href="#" className={styles.link}>
-              Services
+              <span className={styles.linkText}>Services</span>
             </a>
           </li>
           <li>
             <a href="#" className={styles.link}>
-              Contact me
+              <span className={styles.linkText}>Contact me</span>
             </a>
           </li>
         </ul>
