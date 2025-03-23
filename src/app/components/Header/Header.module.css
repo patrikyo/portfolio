@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  flex: 2;
+}
+
+.nav {
+  flex: 4;
+}
+
+.listContainer {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+  color: #27ae60;
+  transition: color 1s ease-out;
+}
