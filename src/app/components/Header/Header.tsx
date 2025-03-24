@@ -11,7 +11,9 @@ const Header = () => {
   return (
     <header className={styles.container}>
       <span className={styles.title}>Patrik</span>
-      <HamburgerMenu links={links} />
+      <div className={styles.menuContainer}>
+        <HamburgerMenu links={links} />
+      </div>
     </header>
   );
 };
