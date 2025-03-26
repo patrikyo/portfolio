@@ -10,40 +10,51 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
 
   return (
     <div className={styles.container}>
-      {/* TOGGLE btn */}
+      {/* TOGGLE BUTTON */}
       <button
         className={styles.toggleBtn}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
+        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        aria-expanded={isMenuOpen}
+        aria-controls="menu-list"
       >
         <span
           className={`${styles.icon} ${!isMenuOpen ? styles.iconHidden : ""}`}
         >
-          <FontAwesomeIcon icon={faClose} size="3x" color="#ffff" />
+          <FontAwesomeIcon
+            icon={faClose}
+            size="3x"
+            color="#ffff"
+            aria-hidden="true"
+          />
         </span>
 
         <span
           className={`${styles.icon} ${isMenuOpen ? styles.iconHidden : ""}`}
         >
-          <FontAwesomeIcon icon={faBars} size="3x" color="#ffff" />
+          <FontAwesomeIcon
+            icon={faBars}
+            size="3x"
+            color="#ffff"
+            aria-hidden="true"
+          />
         </span>
       </button>
 
-      {/* NAV list*/}
-      <nav>
+      {/* NAVIGATION LIST */}
+      <nav id="menu-list" role="menu" hidden={!isMenuOpen}>
         <ul
           className={`${styles.listContainer} ${
             isMenuOpen ? styles.textVisible : ""
           }`}
         >
-          {links.map((ele, i) => {
-            return (
-              <li key={i}>
-                <a href={ele.href} className={styles.link}>
-                  <span className={styles.linkText}>{ele.title}</span>
-                </a>
-              </li>
-            );
-          })}
+          {links.map((ele, i) => (
+            <li key={i} role="menuitem">
+              <a href={ele.href} className={styles.link}>
+                <span className={styles.linkText}>{ele.title}</span>
+              </a>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>
