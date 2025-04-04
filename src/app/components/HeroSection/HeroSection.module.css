@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: 3rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 1, 125rem;
+  color: #828282;
+  font-size: 700;
+  margin: 0.5rem auto 2rem auto;
+}
+
+.image {
+  border-radius: 50%;
+  border: 0.7rem solid #212121;
+  margin: 0 auto;
+}
+
+.btnContainer {
+  margin: 0 auto;
+  display: flex;
+  gap: 0.7rem;
+}
+
+.ctaBtn {
+  width: 143px;
+  height: 42px;
+  background-color: #171717;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: 500;
+}
+
+.ctaBtnPrimary {
+  background-color: #27ae60;
+  border: none;
+}
