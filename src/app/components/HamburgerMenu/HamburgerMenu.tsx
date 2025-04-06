@@ -9,7 +9,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   return (
-    <div className={styles.container}>
+    <div className="mt-1">
       {/* TOGGLE BUTTON */}
       <button
         className={styles.toggleBtn}

@@ -41,8 +41,8 @@ const About = () => {
               aria-hidden="true"
             />
             <div className={styles.infoContent}>
-              <dt className={styles.infoLabel}>{ele.label}</dt>
-              <dd>{ele.value}</dd>
+              <dt className="font-bold m-0">{ele.label}</dt>
+              <dd className="m-0">{ele.value}</dd>
             </div>
           </li>
         ))}
