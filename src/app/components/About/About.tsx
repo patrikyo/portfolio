@@ -7,9 +7,10 @@ import {
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import styles from "./About.module.css";
+import PersonalInfoItem from "@/app/models/personalInfoItem";
 
 const About = () => {
-  const personalInfo = [
+  const personalInfo: PersonalInfoItem[] = [
     { label: "Full Name", value: "Patrik Youssef", icon: faUser },
     {
       label: "Email Adress",
@@ -20,9 +21,9 @@ const About = () => {
     { label: "phone", value: "0739165824", icon: faMobile },
   ];
   return (
-    <section className={styles.container}>
+    <section className={styles.aboutSection}>
       <h2 className={styles.title}>About</h2>
-      <p className={styles.desc}>
+      <p className={styles.aboutText}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -30,15 +31,22 @@ const About = () => {
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
         occaecat cupidatat non proident
       </p>
-      <ul className={styles.list}>
-        {personalInfo.map((ele, i) => (
-          <li key={i}>
-            <FontAwesomeIcon icon={ele.icon} color="#27AE60" size="lg" />
-            <span className={styles.listItemLabel}>{ele.label}</span>
-            <span>{ele.value}</span>
+      <dl className={styles.infoList}>
+        {personalInfo.map((ele) => (
+          <li key={ele.label} className={styles.infoItem}>
+            <FontAwesomeIcon
+              icon={ele.icon}
+              color="#27AE60"
+              size="lg"
+              aria-hidden="true"
+            />
+            <div className={styles.infoContent}>
+              <dt className={styles.infoLabel}>{ele.label}</dt>
+              <dd>{ele.value}</dd>
+            </div>
           </li>
         ))}
-      </ul>
+      </dl>
     </section>
   );
 };
