@@ -1,0 +1,24 @@
+.container {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.projectCard {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageContainer {
+  position: relative;
+  width: 50%;
+  aspect-ratio: 1;
+}
+
+.title {
+  font-size: 1.5rem;
+}
