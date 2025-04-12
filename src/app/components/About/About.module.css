@@ -1,4 +1,4 @@
-.aboutSection {
+.container {
   padding: 0 1rem;
 }
 .title {
@@ -19,7 +19,7 @@
 
 .infoItem {
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   margin-bottom: 1rem;
 }
 

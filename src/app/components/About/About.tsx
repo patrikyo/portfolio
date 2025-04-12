@@ -21,8 +21,7 @@ const About = () => {
     { label: "phone", value: "0739165824", icon: faMobile },
   ];
   return (
-    <section className={styles.aboutSection}>
-      <h2 className={styles.title}>About</h2>
+    <div className={styles.container}>
       <p className={styles.aboutText}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
@@ -47,7 +46,7 @@ const About = () => {
           </li>
         ))}
       </dl>
-    </section>
+    </div>
   );
 };
 
