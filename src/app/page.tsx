@@ -7,8 +7,20 @@ import Project from "./components/Project/Project";
 import ProjectData from "./models/interfaces/project.interface";
 
 const projectsData: ProjectData[] = [
-  { title: "börsdata", description: "lorum ipsum", img: "./window.svg" },
-  { title: "tayo", description: "lorum ipsum", img: "./window.svg" },
+  {
+    title: "börsdata",
+    description:
+      "lorum ipsum dolar sit emet, lorum ipsum dolar sit emet, lorum ipsum dolar sit emet , lorum ipsum dolar sit emet , lorum ipsum dolar sit emet , lorum ipsum dolar sit emet",
+    img: "./tayo.jpg",
+    url: "https://github.com/patrikyo/stock-fe",
+  },
+  {
+    title: "tayo",
+    description:
+      "lorum ipsum dolar sit emet, lorum ipsum dolar sit emet, lorum ipsum dolar sit emet , lorum ipsum dolar sit emet , lorum ipsum dolar sit emet , lorum ipsum dolar sit emet",
+    img: "./tayo.jpg",
+    url: "https://github.com/patrikyo/elevator",
+  },
 ];
 
 export default function Home() {
