@@ -22,6 +22,7 @@ const skills = [
   { icon: faCode, title: "WCAG" },
   { icon: faCode, title: "Docker" },
   { icon: faCode, title: "Openshift" },
+  { icon: faCode, title: "Next.js" },
 ];
 
 const Skills = () => {
