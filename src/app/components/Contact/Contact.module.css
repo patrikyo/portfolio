@@ -1,0 +1,44 @@
+.contactInfoContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.contactInputContainer {
+  flex: 100%;
+  display: flex;
+  flex-direction: column;
+  color: #4f4f4f;
+  gap: 0.5rem;
+}
+
+.contactInfo {
+  background-color: #171717;
+  border: 0;
+  border-bottom: 2px solid #4f4f4f;
+  color: #fff;
+  height: 2rem;
+}
+
+.contactInfo:focus {
+  outline: none;
+  transition: border-bottom 0.5s ease-out;
+  border-bottom: 2px solid #27ae60;
+}
+
+.sendBtn {
+  display: block;
+  width: 143px;
+  height: 42px;
+  background-color: #27ae60;
+  border: 1px solid #27ae60;
+  color: #fff;
+  font-weight: 500;
+  margin: 1rem auto;
+}
+
+#contactMessage {
+  width: 100%;
+  margin: 0 auto;
+}

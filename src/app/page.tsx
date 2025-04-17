@@ -5,6 +5,7 @@ import About from "./components/About/About";
 import Skills from "./components/Skills/Skills";
 import Project from "./components/Project/Project";
 import ProjectData from "./models/interfaces/project.interface";
+import Contact from "./components/Contact/Contact";
 
 const projectsData: ProjectData[] = [
   {
@@ -39,6 +40,10 @@ export default function Home() {
       <section>
         <h2 className={styles.title}>Skills</h2>
         <Skills />
+      </section>
+      <section>
+        <h2 className={styles.title}>Get in touch</h2>
+        <Contact />
       </section>
     </div>
   );
