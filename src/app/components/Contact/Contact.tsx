@@ -1,54 +1,93 @@
+"use client";
+import { useState } from "react";
 import styles from "./Contact.module.css";
 
 const Contact = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [emailAddress, setEmailAddress] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [userMessage, setUserMessage] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const formData = JSON.stringify({
+      firstName,
+      lastName,
+      email: emailAddress,
+      phone: phoneNumber,
+      message: userMessage,
+    });
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: formData,
+    };
+    fetch("http://localhost:3200/api/contact", requestOptions)
+      .then(() => console.log("Form submitted successfully"))
+      .catch((err) => {
+        console.error("Error submitting form:", err);
+      });
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className={styles.contactInfoContainer}>
         <div className={styles.contactInputContainer}>
-          <label htmlFor="name">Name</label>
+          <label htmlFor="firstName">First Name</label>
           <input
-            id="name"
+            id="firstName"
             className={styles.contactInfo}
             type="text"
-            name="name"
+            name="firstName"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
             required
           />
         </div>
         <div className={styles.contactInputContainer}>
-          <label htmlFor="surname">Last name</label>
+          <label htmlFor="lastName">Last Name</label>
           <input
-            id="surname"
+            id="lastName"
             className={styles.contactInfo}
             type="text"
-            name="surname"
+            name="lastName"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
             required
           />
         </div>
         <div className={styles.contactInputContainer}>
-          <label htmlFor="email">Email</label>
+          <label htmlFor="emailAddress">Email</label>
           <input
-            id="email"
+            id="emailAddress"
             className={styles.contactInfo}
             type="email"
-            name="email"
+            name="emailAddress"
+            value={emailAddress}
+            onChange={(e) => setEmailAddress(e.target.value)}
             required
           />
         </div>
         <div className={styles.contactInputContainer}>
-          <label htmlFor="phone">Phone number</label>
+          <label htmlFor="phoneNumber">Phone Number</label>
           <input
-            id="phone"
+            id="phoneNumber"
             className={styles.contactInfo}
             type="tel"
-            name="phone"
+            name="phoneNumber"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
           />
         </div>
         <div className={styles.contactInputContainer}>
-          <label htmlFor="contactMessage">Message</label>
+          <label htmlFor="userMessage">Message</label>
           <textarea
-            id="contactMessage"
+            id="userMessage"
             className={styles.contactInfo}
-            name="message"
+            name="userMessage"
+            value={userMessage}
+            onChange={(e) => setUserMessage(e.target.value)}
             required
           ></textarea>
         </div>
