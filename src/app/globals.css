@@ -4,6 +4,7 @@
 html {
   font-size: 16px;
   font-family: "DM Sans", Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
