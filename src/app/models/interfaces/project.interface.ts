@@ -1,7 +1,9 @@
+import ProjectImage from "./projectImage.interface";
+
 interface ProjectData {
   title: string;
   description: string;
-  img: string;
+  images: ProjectImage[];
   url: string;
 }
 
