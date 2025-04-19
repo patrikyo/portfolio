@@ -16,9 +16,9 @@ const HeroSection = () => {
         <button className={`${styles.ctaBtn} ${styles.ctaBtnPrimary}`}>
           <span>Download CV</span>
         </button>
-        <button type="button" className={styles.ctaBtn}>
-          <span>Learn More</span>
-        </button>
+        <a href="#contact" className={styles.linkBtn}>
+          <span>Contact me</span>
+        </a>
       </div>
     </div>
   );
