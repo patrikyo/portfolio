@@ -3,9 +3,9 @@ import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import styles from "./Header.module.css";
 const Header = () => {
   const links: Link[] = [
-    { title: "About me", href: "#" },
-    { title: "Services", href: "#" },
-    { title: "Contact me", href: "#" },
+    { title: "About me", href: "#about" },
+    { title: "Projects", href: "#projects" },
+    { title: "Contact", href: "#contact" },
   ];
 
   return (

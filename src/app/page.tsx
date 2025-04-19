@@ -29,19 +29,19 @@ export default function Home() {
     <div className={styles.container}>
       <Header />
       <HeroSection />
-      <section>
+      <section id="about">
         <h2 className={styles.title}>About</h2>
         <About />
       </section>
-      <section>
+      <section id="projects">
         <h2 className={styles.title}>Projects</h2>
         <Project projects={projectsData} />
       </section>
-      <section>
+      <section id="skills">
         <h2 className={styles.title}>Skills</h2>
         <Skills />
       </section>
-      <section>
+      <section id="contact">
         <h2 className={styles.title}>Get in touch</h2>
         <Contact />
       </section>
