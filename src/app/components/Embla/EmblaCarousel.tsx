@@ -3,6 +3,7 @@ import React from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import ClassNames from "embla-carousel-class-names";
+import styles from "./EmblaCarousel.module.css";
 
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import {
@@ -10,14 +11,10 @@ import {
   PrevButton,
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButton";
+import CarouselProps from "@/app/models/interfaces/carouselProps.interface";
 
-type PropType = {
-  slides: number[];
-  options?: EmblaOptionsType;
-};
-
-const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props;
+const EmblaCarousel: React.FC<CarouselProps> = (props) => {
+  const { images, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [ClassNames()]);
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
@@ -34,13 +31,9 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <img
-                className="embla__slide__img"
-                src={`https://picsum.photos/600/350?v=${index}`}
-                alt="Your alt text"
-              />
+          {images.map((img, i) => (
+            <div className="embla__slide" key={i}>
+              <img className="embla__slide__img" src={img.src} alt={img.alt} />
             </div>
           ))}
         </div>
