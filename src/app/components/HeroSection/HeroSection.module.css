@@ -38,9 +38,9 @@
   font-size: 1rem;
 }
 
-.ctaBtnPrimary {
-  background-color: #27ae60;
-  border: none;
+.linkBtnPrimary {
+  background-color: #27ae60 !important;
+  border: none !important;
 }
 
 .linkBtn {

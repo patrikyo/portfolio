@@ -13,9 +13,13 @@ const HeroSection = () => {
       <span className={styles.name}>Hi, I am Patrik Youssef</span>
       <span className={styles.title}>Frontend Developer</span>
       <div className={styles.btnContainer}>
-        <button className={`${styles.ctaBtn} ${styles.ctaBtnPrimary}`}>
+        <a
+          href="/dummy.pdf"
+          className={`${styles.linkBtn} ${styles.linkBtnPrimary}`}
+          download="patrik_youssef_cv.pdf"
+        >
           <span>Download CV</span>
-        </button>
+        </a>
         <a href="#contact" className={styles.linkBtn}>
           <span>Contact me</span>
         </a>
