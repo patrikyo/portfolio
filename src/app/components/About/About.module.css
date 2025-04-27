@@ -9,7 +9,7 @@
 
 .aboutText {
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .infoList {
@@ -29,4 +29,35 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+@media screen and (min-width: 576px) {
+  .infoList {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .infoItem {
+    flex: 40%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .infoList {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .aboutText {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .infoList {
+    max-width: 600px;
+    margin-bottom: 3rem;
+  }
 }

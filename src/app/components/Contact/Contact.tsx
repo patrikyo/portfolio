@@ -84,7 +84,7 @@ const Contact = () => {
           <label htmlFor="userMessage">Message</label>
           <textarea
             id="userMessage"
-            className={styles.contactInfo}
+            className={`${styles.contactInfo} ${styles.textArea}`}
             name="userMessage"
             value={userMessage}
             onChange={(e) => setUserMessage(e.target.value)}

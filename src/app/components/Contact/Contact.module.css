@@ -27,6 +27,10 @@
   border-bottom: 2px solid #27ae60;
 }
 
+.contactInputContainer:last-child {
+  margin-top: 1rem;
+}
+
 .sendBtn {
   display: block;
   width: 143px;
@@ -36,9 +40,28 @@
   color: #fff;
   font-weight: 500;
   margin: 1rem auto;
+  margin-top: 1.8rem;
 }
 
-#contactMessage {
-  width: 100%;
-  margin: 0 auto;
+.textArea {
+  border: 2px solid #4f4f4f;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .contactInfoContainer {
+    max-width: 753px;
+    margin: 0 auto;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .contactInputContainer {
+    flex: 40%;
+    flex-wrap: wrap;
+  }
+
+  .contactInputContainer:last-child {
+    margin-top: 1.5rem;
+  }
 }

@@ -2,7 +2,7 @@
 @import "./styles/utils/util.css";
 
 html {
-  font-size: 16px;
+  font-size: 18px;
   font-family: "DM Sans", Arial, sans-serif;
   scroll-behavior: smooth;
 }
@@ -45,7 +45,9 @@ body {
   grid-template-columns: auto 1fr;
   justify-content: space-between;
   gap: 1.2rem;
-  margin-top: 1.8rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  scale: 0.9;
 }
 .embla__buttons {
   display: grid;

@@ -12,7 +12,7 @@ const Project: React.FC<ProjectProps> = ({ projects }) => {
             <EmblaCarousel images={ele.images} />
           </div>
           <h3 className={styles.title}>{ele.title}</h3>
-          <p>{ele.description}</p>
+          <p className={styles.description}>{ele.description}</p>
           <div className={styles.linkContainer}>
             <FontAwesomeIcon icon={faExternalLink} color="#27ae60" />
             <a href={ele.url} className={styles.link}>

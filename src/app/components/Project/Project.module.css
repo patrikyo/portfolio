@@ -15,15 +15,9 @@
   margin-bottom: 3rem;
 }
 
-.imageContainer {
-  position: relative;
-  width: 110%;
-  aspect-ratio: 1;
-}
-
 .title {
   font-size: 1.5rem;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .linkContainer {
@@ -36,4 +30,10 @@
   color: #27ae60;
   text-decoration: none;
   font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .description {
+    max-width: 800px;
+  }
 }
