@@ -1,8 +1,9 @@
-import ProjectProps from "@/app/models/interfaces/ProjectProps.interface";
 import styles from "./Project.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
 import EmblaCarousel from "../Embla/EmblaCarousel";
+import ProjectProps from "@/app/models/interfaces/projectProps.interface";
+
 const Project: React.FC<ProjectProps> = ({ projects }) => {
   return (
     <div className={styles.container}>

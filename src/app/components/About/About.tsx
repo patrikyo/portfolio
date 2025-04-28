@@ -1,25 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUser,
-  faEnvelope,
-  faMobile,
-} from "@fortawesome/free-solid-svg-icons";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import styles from "./About.module.css";
-import PersonalInfoItem from "@/app/models/personalInfoItem";
+import AboutProps from "@/app/models/interfaces/aboutProps.interface";
 
-const About = () => {
-  const personalInfo: PersonalInfoItem[] = [
-    { label: "Full Name", value: "Patrik Youssef", icon: faUser },
-    {
-      label: "Email Adress",
-      value: "patrikyoussef@gmail.com",
-      icon: faEnvelope,
-    },
-    { label: "Linkedin", value: "Lorum ipsum", icon: faLinkedin },
-    { label: "phone", value: "0739165824", icon: faMobile },
-  ];
+const About: React.FC<AboutProps> = ({ personalInfo }) => {
   return (
     <div className={styles.container}>
       <p className={styles.aboutText}>

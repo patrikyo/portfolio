@@ -1,32 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faAngular,
-  faCss3,
-  faHtml5,
-  faJs,
-  faNode,
-  faReact,
-} from "@fortawesome/free-brands-svg-icons";
-import { faCode, faT } from "@fortawesome/free-solid-svg-icons";
-
 import styles from "./Skills.module.css";
+import SkillProps from "@/app/models/interfaces/skillsProps.interface";
 
-const skills = [
-  { icon: faT, title: "Typescript" },
-  { icon: faJs, title: "Javascript" },
-  { icon: faHtml5, title: "HTML5" },
-  { icon: faCss3, title: "CSS3" },
-  { icon: faReact, title: "React" },
-  { icon: faAngular, title: "Angular" },
-  { icon: faNode, title: "Node.js" },
-  { icon: faCode, title: "WCAG" },
-  { icon: faCode, title: "Docker" },
-  { icon: faCode, title: "Openshift" },
-  { icon: faCode, title: "Next.js" },
-  { icon: faCode, title: "MongoDB" },
-];
-
-const Skills = () => {
+const Skills: React.FC<SkillProps> = ({ skills }) => {
   return (
     <div className={styles.container}>
       <ul className={styles.list}>
