@@ -21,6 +21,10 @@
   height: 2rem;
 }
 
+.error {
+  color: #b80808;
+}
+
 .contactInfo:focus {
   outline: none;
   transition: border-bottom 0.5s ease-out;
