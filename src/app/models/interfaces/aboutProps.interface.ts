@@ -1,4 +1,4 @@
-import PersonalInfoItem from "../personalInfoItem";
+import PersonalInfoItem from "./personalInfoItem";
 interface AboutProps {
   personalInfo: PersonalInfoItem[];
 }

@@ -5,7 +5,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-import PersonalInfoItem from "@/app/models/personalInfoItem";
+import PersonalInfoItem from "@/app/models/interfaces/personalInfoItem";
 
 const personalInfo: PersonalInfoItem[] = [
   { label: "Full Name", value: "Patrik Youssef", icon: faUser },
