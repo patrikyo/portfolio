@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   gap: 10px;
   justify-content: flex-start;
+  padding: 0 0.5rem;
 }
 
 .contactInputContainer {
@@ -44,7 +45,6 @@
   border: 1px solid #27ae60;
   color: #fff;
   font-weight: 500;
-  margin: 1rem auto;
   margin-top: 1.8rem;
 }
 
@@ -54,12 +54,17 @@
   font-family: "DM Sans", Arial, sans-serif;
 }
 
+.sendBtn {
+  margin: 2rem auto;
+}
+
 @media screen and (min-width: 768px) {
   .contactInfoContainer {
     max-width: 753px;
     margin: 0 auto;
     flex-direction: row;
     gap: 2rem;
+    padding: 0;
   }
 
   .contactInputContainer {
@@ -68,6 +73,6 @@
   }
 
   .contactInputContainer:last-child {
-    margin-top: 1.5rem;
+    margin-top: 0;
   }
 }
