@@ -9,9 +9,6 @@ const Project: React.FC<ProjectProps> = ({ projects }) => {
     <div className={styles.container}>
       {projects.map((ele, i) => (
         <div className={styles.projectCard} key={i}>
-          <div className={styles.imageContainer}>
-            <EmblaCarousel images={ele.images} />
-          </div>
           <h3 className={styles.title}>{ele.title}</h3>
           <p className={styles.description}>{ele.description}</p>
           <div className={styles.linkContainer}>
@@ -19,6 +16,9 @@ const Project: React.FC<ProjectProps> = ({ projects }) => {
             <a href={ele.url} className={styles.link}>
               {ele.title}
             </a>
+          </div>
+          <div className={styles.imageContainer}>
+            <EmblaCarousel images={ele.images} />
           </div>
         </div>
       ))}

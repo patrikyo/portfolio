@@ -49,7 +49,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
           }`}
         >
           {links.map((ele, i) => (
-            <li key={i} role="menuitem">
+            <li key={i} role="menuitem" className={i === 0 ? "mt-1" : "mt-0"}>
               <a href={ele.href} className={styles.link}>
                 <span className={styles.linkText}>{ele.title}</span>
               </a>

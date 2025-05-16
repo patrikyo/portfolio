@@ -38,11 +38,6 @@
   font-size: 1rem;
 }
 
-.linkBtnPrimary {
-  background-color: #27ae60 !important;
-  border: none !important;
-}
-
 .linkBtn {
   width: 143px;
   height: 42px;
@@ -53,4 +48,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.linkBtn:hover {
+  background-color: #505050;
+  transition: background-color 0.5s ease-out;
+}
+
+.linkBtnPrimary {
+  background-color: #27ae60;
+  border: none;
+}
+
+.linkBtnPrimary:hover {
+  background-color: #14522e;
+  transition: background-color 0.5s ease-out;
 }

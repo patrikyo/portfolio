@@ -15,8 +15,54 @@
   flex: 1;
 }
 
+.hamburgerMenu {
+  display: block;
+}
+
+.desktopMenu {
+  display: none;
+}
+
 @media screen and (min-width: 576px) {
   .menuContainer {
     flex: 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .title {
+    flex: 8;
+  }
+
+  .menuContainer {
+    flex: 2;
+  }
+
+  .hamburgerMenu {
+    display: none;
+  }
+
+  .desktopMenu {
+    display: block;
+    width: 115%;
+  }
+
+  .listContainer {
+    display: flex;
+    gap: 56px;
+    list-style: none;
+    padding: 0;
+  }
+
+  .link {
+    width: 50px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .link:hover {
+    color: #27ae60;
+    border-bottom: 3px solid #27ae60;
+    transition: color 1s ease-out, border 1s ease-out;
   }
 }

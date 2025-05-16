@@ -55,6 +55,7 @@
 }
 
 .sendBtn {
+  cursor: pointer;
   margin: 2rem auto;
 }
 
