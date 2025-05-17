@@ -1,7 +1,6 @@
 import Link from "@/app/models/interfaces/link.interface";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import styles from "./Header.module.css";
-import { useState } from "react";
 const Header = () => {
   const links: Link[] = [
     { title: "About me", href: "#about" },
@@ -12,7 +11,6 @@ const Header = () => {
   return (
     <header className={styles.container}>
       <span className={styles.title}>Patrik</span>
-
       <div className={styles.menuContainer}>
         {/* HamburgerMenu is only shown with small devices */}
         <div className={styles.hamburgerMenu}>
