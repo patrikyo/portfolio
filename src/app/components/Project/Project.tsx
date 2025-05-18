@@ -7,20 +7,26 @@ import ProjectProps from "@/app/models/interfaces/projectProps.interface";
 const Project: React.FC<ProjectProps> = ({ projects }) => {
   return (
     <div className={styles.container}>
-      {projects.map((ele, i) => (
-        <div className={styles.projectCard} key={i}>
+      {projects.map((ele) => (
+        <article className={styles.projectCard} key={ele.url}>
           <h3 className={styles.title}>{ele.title}</h3>
           <p className={styles.description}>{ele.description}</p>
           <div className={styles.linkContainer}>
             <FontAwesomeIcon icon={faExternalLink} color="#27ae60" />
-            <a href={ele.url} className={styles.link}>
+            <a
+              href={ele.url}
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Open ${ele.title} in a new tab`}
+            >
               {ele.title}
             </a>
           </div>
           <div className={styles.imageContainer}>
             <EmblaCarousel images={ele.images} />
           </div>
-        </div>
+        </article>
       ))}
     </div>
   );

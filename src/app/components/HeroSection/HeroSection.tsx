@@ -17,6 +17,7 @@ const HeroSection = () => {
           href="/dummy.pdf"
           className={`${styles.linkBtn} ${styles.linkBtnPrimary}`}
           download="patrik_youssef_cv.pdf"
+          type="application/pdf"
         >
           <span>Download CV</span>
         </a>
