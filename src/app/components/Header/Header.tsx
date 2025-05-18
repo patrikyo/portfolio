@@ -1,6 +1,7 @@
 import Link from "@/app/models/interfaces/link.interface";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import styles from "./Header.module.css";
+import Navigation from "../Navigation/Navigation";
 const Header = () => {
   const links: Link[] = [
     { title: "About me", href: "#about" },
@@ -18,15 +19,7 @@ const Header = () => {
         </div>
         {/* Desktop menu */}
         <nav className={styles.desktopMenu} aria-label="Main navigation">
-          <ul className={styles.listContainer}>
-            {links.map((link) => (
-              <li key={link.href}>
-                <a className={styles.link} href={link.href}>
-                  {link.title}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <Navigation links={links} />
         </nav>
       </div>
     </header>
