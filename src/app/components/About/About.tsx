@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import styles from "./About.module.css";
 import AboutProps from "@/app/models/interfaces/aboutProps.interface";
 
@@ -14,9 +13,9 @@ const About: React.FC<AboutProps> = ({ personalInfo }) => {
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
         occaecat cupidatat non proident
       </p>
-      <dl className={styles.infoList}>
+      <ul className={styles.infoList} role="list">
         {personalInfo.map((ele) => (
-          <li key={ele.label} className={styles.infoItem}>
+          <li key={ele.label + ele.value} className={styles.infoItem}>
             <FontAwesomeIcon
               icon={ele.icon}
               color="#27AE60"
@@ -24,12 +23,12 @@ const About: React.FC<AboutProps> = ({ personalInfo }) => {
               aria-hidden="true"
             />
             <div className={styles.infoContent}>
-              <dt className="font-bold m-0">{ele.label}</dt>
-              <dd className="m-0">{ele.value}</dd>
+              <span className={styles.infoLabel}>{ele.label}</span>
+              <span className={styles.infoValue}>{ele.value}</span>
             </div>
           </li>
         ))}
-      </dl>
+      </ul>
     </div>
   );
 };
