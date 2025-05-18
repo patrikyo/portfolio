@@ -16,22 +16,18 @@ const Header = () => {
         <div className={styles.hamburgerMenu}>
           <HamburgerMenu links={links} />
         </div>
-        {/* Desktop menu*/}
-        <div className={styles.desktopMenu}>
-          <nav>
-            <ul className={styles.listContainer}>
-              {links.map((link, i) => {
-                return (
-                  <li key={i}>
-                    <a className={styles.link} href={link.href}>
-                      {link.title}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </nav>
-        </div>
+        {/* Desktop menu */}
+        <nav className={styles.desktopMenu} aria-label="Main navigation">
+          <ul className={styles.listContainer}>
+            {links.map((link) => (
+              <li key={link.href}>
+                <a className={styles.link} href={link.href}>
+                  {link.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
     </header>
   );

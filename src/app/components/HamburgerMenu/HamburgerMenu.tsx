@@ -6,15 +6,14 @@ import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="mt-1">
+    <div className={styles.container}>
       {/* TOGGLE BUTTON */}
       <button
         className={styles.toggleBtn}
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        onClick={() => setIsMenuOpen((open) => !open)}
         aria-expanded={isMenuOpen}
         aria-controls="menu-list"
       >
@@ -24,33 +23,36 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
           <FontAwesomeIcon
             icon={faClose}
             size="3x"
-            color="#ffff"
+            color="#fff"
             aria-hidden="true"
           />
         </span>
-
         <span
           className={`${styles.icon} ${isMenuOpen ? styles.iconHidden : ""}`}
         >
           <FontAwesomeIcon
             icon={faBars}
             size="3x"
-            color="#ffff"
+            color="#fff"
             aria-hidden="true"
           />
         </span>
       </button>
 
       {/* NAVIGATION LIST */}
-      <nav id="menu-list" role="menu" hidden={!isMenuOpen}>
+      <nav id="menu-list" hidden={!isMenuOpen}>
         <ul
           className={`${styles.listContainer} ${
             isMenuOpen ? styles.textVisible : ""
           }`}
         >
-          {links.map((ele, i) => (
-            <li key={i} role="menuitem" className={i === 0 ? "mt-1" : "mt-0"}>
-              <a href={ele.href} className={styles.link}>
+          {links.map((ele) => (
+            <li key={ele.href} className={styles.listItem}>
+              <a
+                href={ele.href}
+                className={styles.link}
+                tabIndex={isMenuOpen ? 0 : -1}
+              >
                 <span className={styles.linkText}>{ele.title}</span>
               </a>
             </li>
