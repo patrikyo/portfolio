@@ -1,12 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "./Contact.module.css";
-import {
-  validateEmailPattern,
-  validateNamePattern,
-  validatePhone,
-  validateMinMaxLength,
-} from "./validation";
+import { getValidationError } from "./validation";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -26,67 +21,8 @@ const Contact = () => {
   });
 
   const validateInput = (name: string, value: string) => {
-    switch (name) {
-      case "firstName":
-      case "lastName":
-        if (validateNamePattern(value)) {
-          setIsFormValid({
-            ...isFormValid,
-            [name]: `${
-              name === "firstName" ? "First" : "Last"
-            } name can only contain Letters (a-z,å,ä,ö)`,
-          });
-        } else if (validateMinMaxLength(value, 2, 50)) {
-          setIsFormValid({
-            ...isFormValid,
-            [name]: `${
-              name === "firstName" ? "First" : "Last"
-            } name must be between 2 and 50 characters Long`,
-          });
-        } else {
-          setIsFormValid({ ...isFormValid, [name]: "" });
-        }
-        break;
-      case "emailAdress":
-        if (validateEmailPattern(value)) {
-          setIsFormValid({
-            ...isFormValid,
-            [name]: "Please enter a valid email adress",
-          });
-        } else if (validateMinMaxLength(value, 5, 254)) {
-          setIsFormValid({
-            ...isFormValid,
-            [name]: "Email must be between 5 and 254 characters Long",
-          });
-        } else {
-          setIsFormValid({ ...isFormValid, [name]: "" });
-        }
-        break;
-      case "phoneNumber":
-        if (validatePhone(value)) {
-          setIsFormValid({
-            ...isFormValid,
-            [name]: "Phone number must be in a valid format",
-          });
-        } else if (validateMinMaxLength(value, 7, 20)) {
-          setIsFormValid({
-            ...isFormValid,
-            [name]: "Phone number must be between 7 and 20 characters Long",
-          });
-        } else {
-          setIsFormValid({ ...isFormValid, [name]: "" });
-        }
-        break;
-      case "userMessage":
-        if (validateMinMaxLength(value, 10, 1000)) {
-          setIsFormValid({
-            ...isFormValid,
-            [name]: "Message must be at least 10 characters Long",
-          });
-        } else {
-          setIsFormValid({ ...isFormValid, [name]: "" });
-        }
-    }
+    const error = getValidationError(name, value);
+    setIsFormValid({ ...isFormValid, [name]: error });
   };
 
   const handleSubmit = (e: React.FormEvent) => {
