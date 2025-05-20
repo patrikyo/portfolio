@@ -1,3 +1,5 @@
+import ContactField from "@/app/models/enums/ContactField.enum";
+
 const validateNamePattern = (value: string): boolean => {
   const nonAlphabetRegex = /[^a-zåäö]/gi;
 
@@ -34,10 +36,10 @@ const validatePhone = (value: string) => {
   return false;
 };
 
-const getValidationError = (name: string, value: string): string => {
+const getValidationError = (name: ContactField, value: string): string => {
   switch (name) {
-    case "firstName":
-    case "lastName":
+    case ContactField.FirstName:
+    case ContactField.LastName:
       if (validateNamePattern(value)) {
         return `${
           name === "firstName" ? "First" : "Last"
@@ -48,21 +50,21 @@ const getValidationError = (name: string, value: string): string => {
         } name must be between 2 and 50 characters Long`;
       }
       return "";
-    case "emailAdress":
+    case ContactField.EmailAddress:
       if (validateEmailPattern(value)) {
         return "Please enter a valid email adress";
       } else if (validateMinMaxLength(value, 5, 254)) {
         return "Email must be between 5 and 254 characters Long";
       }
       return "";
-    case "phoneNumber":
+    case ContactField.PhoneNumber:
       if (validatePhone(value)) {
         return "Phone number must be in a valid format";
       } else if (validateMinMaxLength(value, 7, 20)) {
         return "Phone number must be between 7 and 20 characters Long";
       }
       return "";
-    case "userMessage":
+    case ContactField.UserMessage:
       if (validateMinMaxLength(value, 10, 1000)) {
         return "Message must be at least 10 characters Long";
       }
