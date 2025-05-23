@@ -7,7 +7,6 @@ const fields = [
     type: "text",
     required: true,
     autoComplete: "given-name",
-    autoFocus: true,
   },
   {
     key: ContactField.LastName,

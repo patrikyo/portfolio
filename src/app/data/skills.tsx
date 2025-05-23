@@ -16,11 +16,12 @@ const skills: Skill[] = [
   { icon: faCss3, title: "CSS3" },
   { icon: faReact, title: "React" },
   { icon: faAngular, title: "Angular" },
-  { icon: faNode, title: "Node.js" },
-  { icon: faCode, title: "WCAG" },
-  { icon: faCode, title: "Docker" },
-  { icon: faCode, title: "Openshift" },
   { icon: faCode, title: "Next.js" },
+  { icon: faCode, title: "WCAG" },
+  { icon: faCode, title: "RxJS" },
+  { icon: faCode, title: "Docker" },
+  { icon: faNode, title: "Node.js" },
+  { icon: faCode, title: "Openshift" },
   { icon: faCode, title: "MongoDB" },
 ];
 

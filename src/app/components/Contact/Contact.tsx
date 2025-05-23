@@ -79,13 +79,12 @@ const Contact = () => {
                 onChange={(e) => {
                   setFormData({
                     ...formData,
-                    [field.key]: e.target.value.trim(),
+                    [field.key]: e.target.value,
                   });
                   validateInput(field.key, e.target.value.trim());
                 }}
                 required={field.required}
                 autoComplete={field.autoComplete}
-                autoFocus={field.autoFocus ? true : false}
                 aria-invalid={!!isFormValid[field.key]}
                 aria-describedby={errorId}
               />
@@ -107,7 +106,7 @@ const Contact = () => {
             name={ContactField.UserMessage}
             value={formData.userMessage}
             onChange={(e) => {
-              setFormData({ ...formData, userMessage: e.target.value.trim() });
+              setFormData({ ...formData, userMessage: e.target.value });
               validateInput(ContactField.UserMessage, e.target.value.trim());
             }}
             required
@@ -125,19 +124,26 @@ const Contact = () => {
           )}
         </div>
       </div>
-      <button className={styles.sendBtn} type="submit">
+      <button
+        className={`${styles.sendBtn} ${
+          submitStatus ? styles.withStatusMessage : styles.withoutStatusMessage
+        }`}
+        type="submit"
+      >
         Send Message
       </button>
-      {submitStatus === "success" && (
-        <div className={styles.success} role="alert">
-          Message sent!
-        </div>
-      )}
-      {submitStatus === "error" && (
-        <div className={styles.error} role="alert">
-          Something went wrong. Please try again.
-        </div>
-      )}
+      <div className={styles.statusContainer}>
+        {submitStatus === "success" && (
+          <div className={styles.success} role="alert">
+            Message sent!
+          </div>
+        )}
+        {submitStatus === "error" && (
+          <div className={styles.error} role="alert">
+            Something went wrong. Please try again.
+          </div>
+        )}
+      </div>
     </form>
   );
 };

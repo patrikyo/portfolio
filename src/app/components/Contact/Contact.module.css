@@ -59,6 +59,19 @@
   margin: 2rem auto;
 }
 
+.statusContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.withStatusMessage {
+  margin-bottom: 0.5rem;
+}
+
+.withoutStatusMessage {
+  margin-bottom: 2rem;
+}
+
 @media screen and (min-width: 768px) {
   .contactInfoContainer {
     max-width: 753px;
