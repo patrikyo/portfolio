@@ -1,5 +1,5 @@
 "use client";
-import HamburgerMenuProps from "@/app/models/interfaces/hamburgerMenuProps.interface";
+import HamburgerMenuProps from "@/app/models/interfaces/HamburgerMenuProps.interface";
 import styles from "./HamburgerMenu.module.css";
 import { useState } from "react";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";

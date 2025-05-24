@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Skills.module.css";
-import SkillProps from "@/app/models/interfaces/skillsProps.interface";
+import SkillProps from "@/app/models/interfaces/SkillsProps.interface";
 
 const Skills: React.FC<SkillProps> = ({ skills }) => (
   <div className={styles.container}>

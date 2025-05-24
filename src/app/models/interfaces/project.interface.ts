@@ -1,4 +1,4 @@
-import ProjectImage from "./projectImage.interface";
+import ProjectImage from "./ProjectImage.interface";
 
 interface ProjectData {
   title: string;

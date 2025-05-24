@@ -7,7 +7,7 @@ import {
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
 import { faCode, faT } from "@fortawesome/free-solid-svg-icons";
-import Skill from "../models/interfaces/skill";
+import Skill from "../models/interfaces/Skill";
 
 const skills: Skill[] = [
   { icon: faT, title: "Typescript" },

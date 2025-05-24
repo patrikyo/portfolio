@@ -1,4 +1,4 @@
-import Link from "@/app/models/interfaces/link.interface";
+import Link from "@/app/models/interfaces/Link.interface";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import styles from "./Header.module.css";
 import Navigation from "../Navigation/Navigation";

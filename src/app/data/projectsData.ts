@@ -1,4 +1,4 @@
-import ProjectData from "../models/interfaces/project.interface";
+import ProjectData from "../models/interfaces/Project.interface";
 
 const projectsData: ProjectData[] = [
   {
