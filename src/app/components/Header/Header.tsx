@@ -11,7 +11,9 @@ const Header = () => {
 
   return (
     <header className={styles.container}>
-      <span className={styles.title}>Patrik</span>
+      <span className={styles.title} aria-label="Sites logo">
+        Patrik
+      </span>
       <div className={styles.menuContainer}>
         {/* HamburgerMenu is only shown with small devices */}
         <div className={styles.hamburgerMenu}>

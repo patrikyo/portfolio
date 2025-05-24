@@ -1,7 +1,8 @@
 import ContactField from "@/app/models/enums/ContactField.enum";
 
 const validateNamePattern = (value: string): boolean => {
-  const nonAlphabetRegex = /[^a-zåäö]/gi;
+  value = value.trim();
+  const nonAlphabetRegex = /[^a-zåäö ]/gi;
 
   if (nonAlphabetRegex.test(value)) {
     return true;

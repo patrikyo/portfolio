@@ -4,9 +4,9 @@ import SkillProps from "@/app/models/interfaces/skillsProps.interface";
 
 const Skills: React.FC<SkillProps> = ({ skills }) => (
   <div className={styles.container}>
-    <ul className={styles.list}>
-      {skills.map((ele) => (
-        <li className={styles.listItem} key={ele.title}>
+    <ul className={styles.list} aria-label="Skills">
+      {skills.map((ele, idx) => (
+        <li className={styles.listItem} key={ele.title + idx}>
           <figure className={styles.figureContainer}>
             <FontAwesomeIcon
               icon={ele.icon}

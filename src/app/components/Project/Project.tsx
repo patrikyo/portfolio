@@ -8,11 +8,15 @@ const Project: React.FC<ProjectProps> = ({ projects }) => {
   return (
     <div className={styles.container}>
       {projects.map((ele) => (
-        <article className={styles.projectCard} key={ele.url}>
+        <article className={styles.projectCard} key={ele.url + ele.title}>
           <h3 className={styles.title}>{ele.title}</h3>
           <p className={styles.description}>{ele.description}</p>
           <div className={styles.linkContainer}>
-            <FontAwesomeIcon icon={faExternalLink} color="#27ae60" />
+            <FontAwesomeIcon
+              icon={faExternalLink}
+              color="#27ae60"
+              aria-hidden="true"
+            />
             <a
               href={ele.url}
               className={styles.link}

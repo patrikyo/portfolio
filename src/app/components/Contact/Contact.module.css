@@ -45,7 +45,6 @@
   border: 1px solid #27ae60;
   color: #fff;
   font-weight: 500;
-  margin-top: 1.8rem;
 }
 
 .textArea {
@@ -56,12 +55,6 @@
 
 .sendBtn {
   cursor: pointer;
-  margin: 2rem auto;
-}
-
-.statusContainer {
-  display: flex;
-  justify-content: center;
 }
 
 .withStatusMessage {
@@ -72,6 +65,12 @@
   margin-bottom: 2rem;
 }
 
+.submitContainer {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 @media screen and (min-width: 768px) {
   .contactInfoContainer {
     max-width: 753px;

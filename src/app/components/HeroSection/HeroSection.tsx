@@ -19,7 +19,7 @@ const HeroSection = () => {
           download="patrik_youssef_cv.pdf"
           type="application/pdf"
         >
-          <span>Download CV</span>
+          <span aria-label="Download Patrik Youssef CV">Download CV</span>
         </a>
         <a href="#contact" className={styles.linkBtn}>
           <span>Contact me</span>

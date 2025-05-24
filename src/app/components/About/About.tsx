@@ -13,7 +13,11 @@ const About: React.FC<AboutProps> = ({ personalInfo }) => {
         velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
         occaecat cupidatat non proident
       </p>
-      <ul className={styles.infoList} role="list">
+      <ul
+        className={styles.infoList}
+        role="list"
+        aria-label="Personal information"
+      >
         {personalInfo.map((ele) => (
           <li key={ele.label + ele.value} className={styles.infoItem}>
             <FontAwesomeIcon

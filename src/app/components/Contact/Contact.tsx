@@ -5,6 +5,7 @@ import { getValidationError } from "./validation";
 import ContactField from "@/app/models/enums/ContactField.enum";
 import fields from "@/app/data/fields";
 import Status from "@/app/models/enums/Status.enum";
+import { ClipLoader } from "react-spinners";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,6 +25,7 @@ const Contact = () => {
   });
 
   const [submitStatus, setSubmitStatus] = useState<Status | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const validateInput = (name: ContactField, value: string) => {
     const error = getValidationError(name, value);
@@ -32,6 +34,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
 
     const form = JSON.stringify(formData);
     const requestOptions = {
@@ -56,9 +59,11 @@ const Contact = () => {
           [ContactField.PhoneNumber]: "",
           [ContactField.UserMessage]: "",
         });
+        setIsLoading(false);
       })
       .catch((err) => {
         setSubmitStatus(Status.Error);
+        setIsLoading(false);
       });
   };
 
@@ -81,7 +86,7 @@ const Contact = () => {
                     ...formData,
                     [field.key]: e.target.value,
                   });
-                  validateInput(field.key, e.target.value.trim());
+                  validateInput(field.key, e.target.value);
                 }}
                 required={field.required}
                 autoComplete={field.autoComplete}
@@ -107,7 +112,7 @@ const Contact = () => {
             value={formData.userMessage}
             onChange={(e) => {
               setFormData({ ...formData, userMessage: e.target.value });
-              validateInput(ContactField.UserMessage, e.target.value.trim());
+              validateInput(ContactField.UserMessage, e.target.value);
             }}
             required
             aria-invalid={!!isFormValid.userMessage}
@@ -124,23 +129,37 @@ const Contact = () => {
           )}
         </div>
       </div>
-      <button
-        className={`${styles.sendBtn} ${
-          submitStatus ? styles.withStatusMessage : styles.withoutStatusMessage
-        }`}
-        type="submit"
-      >
-        Send Message
-      </button>
-      <div className={styles.statusContainer}>
-        {submitStatus === "success" && (
-          <div className={styles.success} role="alert">
-            Message sent!
+      <div className={styles.submitContainer}>
+        {!isLoading && (
+          <button
+            className={`${styles.sendBtn} ${
+              submitStatus
+                ? styles.withStatusMessage
+                : styles.withoutStatusMessage
+            }`}
+            type="submit"
+          >
+            Send Message
+          </button>
+        )}
+
+        {isLoading && (
+          <div className={styles.withoutStatusMessage}>
+            <ClipLoader size={32} color="#27ae60" />{" "}
           </div>
         )}
-        {submitStatus === "error" && (
-          <div className={styles.error} role="alert">
-            Something went wrong. Please try again.
+        {!isLoading && (
+          <div>
+            {submitStatus === "success" && (
+              <div className={styles.success} role="alert" aria-live="polite">
+                Message sent!
+              </div>
+            )}
+            {submitStatus === "error" && (
+              <div className={styles.error} role="alert" aria-live="polite">
+                Something went wrong. Please try again.
+              </div>
+            )}
           </div>
         )}
       </div>
