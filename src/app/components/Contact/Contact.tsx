@@ -149,7 +149,7 @@ const Contact = () => {
           </div>
         )}
         {!isLoading && (
-          <div>
+          <div className="mb-2">
             {submitStatus === "success" && (
               <div className={styles.success} role="alert" aria-live="polite">
                 Message sent!
