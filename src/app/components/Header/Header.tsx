@@ -1,7 +1,9 @@
+import React from "react";
 import Link from "@/app/models/interfaces/Link.interface";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import styles from "./Header.module.css";
 import Navigation from "../Navigation/Navigation";
+
 const Header = () => {
   const links: Link[] = [
     { title: "About me", href: "#about" },
