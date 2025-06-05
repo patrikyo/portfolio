@@ -1,7 +1,6 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
 import About from "./About";
-import { faEnvelope, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import PersonalInfoItem from "@/app/models/interfaces/PersonalInfoItem";
 
