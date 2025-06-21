@@ -6,9 +6,10 @@ import ContactField from "@/app/models/enums/ContactField.enum";
 import fields from "@/app/data/fields";
 import Status from "@/app/models/enums/Status.enum";
 import { ClipLoader } from "react-spinners";
+import ContactInput from "@/app/models/interfaces/ContactInput.interface";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactInput>({
     [ContactField.FirstName]: "",
     [ContactField.LastName]: "",
     [ContactField.EmailAddress]: "",
@@ -16,7 +17,7 @@ const Contact = () => {
     [ContactField.UserMessage]: "",
   });
 
-  const [isFormValid, setIsFormValid] = useState({
+  const [isFormValid, setIsFormValid] = useState<ContactInput>({
     [ContactField.FirstName]: "",
     [ContactField.LastName]: "",
     [ContactField.EmailAddress]: "",
@@ -42,7 +43,7 @@ const Contact = () => {
       headers: { "Content-Type": "application/json" },
       body: form,
     };
-    fetch("http://localhost:3200/api/contact", requestOptions)
+    fetch("https://contact-api-3l0q.onrender.com/api/contacts", requestOptions)
       .then(() => {
         setSubmitStatus(Status.Success);
         setFormData({
