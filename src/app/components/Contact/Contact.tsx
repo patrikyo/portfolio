@@ -62,7 +62,7 @@ const Contact = () => {
         });
         setIsLoading(false);
       })
-      .catch((err) => {
+      .catch(() => {
         setSubmitStatus(Status.Error);
         setIsLoading(false);
       });

@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
-import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import ClassNames from "embla-carousel-class-names";
-import styles from "./EmblaCarousel.module.css";
 
 import { DotButton, useDotButton } from "./EmblaCarouselDotButton";
 import {

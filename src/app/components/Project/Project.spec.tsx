@@ -2,7 +2,11 @@ import { render, screen } from "@testing-library/react";
 import Project from "./Project";
 
 // Mock EmblaCarousel så att den inte försöker köra riktig kod
-jest.mock("../Embla/EmblaCarousel", () => () => <div> </div>);
+jest.mock("../Embla/EmblaCarousel", () => {
+  const MockEmbla = () => <div />;
+  MockEmbla.displayName = "MockEmblaCarousel";
+  return MockEmbla;
+});
 
 describe("Project", () => {
   const projects = [
