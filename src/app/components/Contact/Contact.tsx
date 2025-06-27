@@ -25,6 +25,8 @@ const Contact = () => {
     [ContactField.UserMessage]: "",
   });
 
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
+
   const [submitStatus, setSubmitStatus] = useState<Status | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -89,12 +91,13 @@ const Contact = () => {
                   });
                   validateInput(field.key, e.target.value);
                 }}
+                onBlur={() => setTouched({ ...touched, [field.key]: true })}
                 required={field.required}
                 autoComplete={field.autoComplete}
                 aria-invalid={!!isFormValid[field.key]}
                 aria-describedby={errorId}
               />
-              {isFormValid[field.key] && (
+              {touched[field.key] && isFormValid[field.key] && (
                 <span id={errorId} className={styles.error} role="alert">
                   {isFormValid[field.key]}
                 </span>
@@ -115,11 +118,14 @@ const Contact = () => {
               setFormData({ ...formData, userMessage: e.target.value });
               validateInput(ContactField.UserMessage, e.target.value);
             }}
+            onBlur={() =>
+              setTouched({ ...touched, [ContactField.UserMessage]: true })
+            }
             required
             aria-invalid={!!isFormValid.userMessage}
             aria-describedby={`${ContactField.UserMessage}-error`}
           ></textarea>
-          {isFormValid.userMessage && (
+          {touched[ContactField.UserMessage] && isFormValid.userMessage && (
             <span
               id={`${ContactField.UserMessage}-error`}
               className={styles.error}
@@ -153,7 +159,7 @@ const Contact = () => {
           <div className="mb-2">
             {submitStatus === "success" && (
               <div className={styles.success} role="alert" aria-live="polite">
-                Message sent!
+                Message sent
               </div>
             )}
             {submitStatus === "error" && (
