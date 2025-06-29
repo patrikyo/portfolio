@@ -80,7 +80,11 @@ const Contact = () => {
               <label htmlFor={field.key}>{field.label}</label>
               <input
                 id={field.key}
-                className={styles.contactInfo}
+                className={`${styles.contactInfo} ${
+                  touched && isFormValid[field.key]
+                    ? styles.invalidContactInfo
+                    : styles.validContactInfo
+                }`}
                 type={field.type}
                 name={field.key}
                 value={formData[field.key]}
@@ -111,7 +115,11 @@ const Contact = () => {
           <label htmlFor={ContactField.UserMessage}>Message</label>
           <textarea
             id={ContactField.UserMessage}
-            className={`${styles.contactInfo} ${styles.textArea}`}
+            className={`${styles.contactInfo} ${styles.textArea} ${
+              touched && isFormValid.userMessage
+                ? styles.invalidContactInfo
+                : styles.validContactInfo
+            }`}
             name={ContactField.UserMessage}
             value={formData.userMessage}
             onChange={(e) => {

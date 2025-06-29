@@ -36,6 +36,16 @@
   margin-top: 1rem;
 }
 
+.invalidContactInfo {
+  border-bottom: 2px solid red !important;
+  transition: border-bottom 0.5 ease-out;
+}
+
+.validContactInfo {
+  border: 0;
+  border-bottom: 2px solid #4f4f4f;
+}
+
 .sendBtn {
   display: block;
   box-sizing: content-box;
