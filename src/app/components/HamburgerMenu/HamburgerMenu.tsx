@@ -5,12 +5,13 @@ import { useState } from "react";
 import { faBars, faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import Link from "next/link";
 
 const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className={styles.container}>
+    <>
       {/* TOGGLE BUTTON */}
       <button
         className={styles.toggleBtn}
@@ -49,18 +50,18 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ links }) => {
         >
           {links.map((ele) => (
             <li key={ele.href} className={styles.listItem}>
-              <a
+              <Link
                 href={ele.href}
                 className={styles.link}
                 tabIndex={isMenuOpen ? 0 : -1}
               >
                 <span className={styles.linkText}>{ele.title}</span>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
       </nav>
-    </div>
+    </>
   );
 };
 

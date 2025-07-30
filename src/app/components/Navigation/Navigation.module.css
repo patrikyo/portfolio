@@ -2,28 +2,40 @@
   display: none;
 }
 
-@media screen and (min-width: 992px) {
-  .desktopMenu {
-    display: block;
-    width: 115%;
-  }
+.hamburgerMenu {
+  display: block;
+  padding: 0 0.5rem;
+}
 
+@media screen and (min-width: 992px) {
   .listContainer {
     display: flex;
-    gap: 56px;
+    gap: 2rem;
     list-style: none;
     padding: 0;
   }
 
   .link {
-    width: 50px;
     color: #fff;
     text-decoration: none;
   }
 
   .link:hover {
     color: #27ae60;
-    border-bottom: 3px solid #27ae60;
+    border-bottom: 0.1875rem solid #27ae60;
     transition: color 1s ease-out, border 1s ease-out;
+  }
+
+  .listItem {
+    min-width: 5rem;
+  }
+
+  .desktopMenu {
+    display: block;
+    width: 15%;
+  }
+
+  .hamburgerMenu {
+    display: none;
   }
 }

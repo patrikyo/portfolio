@@ -11,17 +11,4 @@ describe("Header", () => {
     render(<Header />);
     expect(screen.getByText("Patrik")).toBeInTheDocument();
   });
-
-  it("Should render navigation with the links 'About me', 'Projects', and 'Contact'", () => {
-    render(<Header />);
-    expect(
-      screen.getAllByRole("link", { name: "About me" }).length
-    ).toBeGreaterThan(0);
-    expect(
-      screen.getAllByRole("link", { name: "Projects" }).length
-    ).toBeGreaterThan(0);
-    expect(
-      screen.getAllByRole("link", { name: "Contact" }).length
-    ).toBeGreaterThan(0);
-  });
 });

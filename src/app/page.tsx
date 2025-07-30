@@ -8,11 +8,21 @@ import Contact from "./components/Contact/Contact";
 import personalInfo from "./data/personalInfo";
 import projectsData from "./data/projectsData";
 import skills from "./data/skills";
+import Navigation from "./components/Navigation/Navigation";
+import Link from "./models/interfaces/Link.interface";
 
 export default function Home() {
+  const links: Link[] = [
+    { title: "About me", href: "#about" },
+    { title: "Projects", href: "#projects" },
+    { title: "Contact", href: "#contact" },
+  ];
   return (
     <div className={styles.container}>
-      <Header />
+      <div className={styles.headerContainer}>
+        <Header />
+        <Navigation links={links} />
+      </div>
       <HeroSection />
       <section id="about">
         <h2 className={styles.title}>About</h2>

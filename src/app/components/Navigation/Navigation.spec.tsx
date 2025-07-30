@@ -23,4 +23,17 @@ describe("Navigation", () => {
       expect(anchor.closest("a")).toHaveAttribute("href", link.href);
     });
   });
+
+  it("Should render navigation with the links 'About me', 'Projects', and 'Contact'", () => {
+    render(<Navigation links={links} />);
+    expect(
+      screen.getAllByRole("link", { name: "About me" }).length
+    ).toBeGreaterThan(0);
+    expect(
+      screen.getAllByRole("link", { name: "Projects" }).length
+    ).toBeGreaterThan(0);
+    expect(
+      screen.getAllByRole("link", { name: "Contact" }).length
+    ).toBeGreaterThan(0);
+  });
 });
