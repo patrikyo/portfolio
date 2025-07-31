@@ -1,0 +1,71 @@
+.headerContainer {
+  background-color: #212121;
+  padding: 2rem 0;
+  text-align: center;
+  margin: 1rem -0.5rem -0.5rem -0.5rem;
+}
+
+.infoContainer {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0 0.5rem;
+}
+
+#checkIcon {
+  color: #27ae60;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+#clockIcon {
+  color: #27ae60;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+#angleIcon {
+  color: #fff;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.responseTimeContainer {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.linkBtnContainer {
+  background-color: #27ae60;
+  width: 8.9375rem;
+  height: 2.625rem;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem 0.4rem;
+  margin: 2rem auto;
+}
+
+.linkBtnContainer:hover {
+  background-color: #1f894b;
+  transition: background-color 0.5s ease-out;
+}
+
+@media screen and (min-width: 576px) {
+  .infoContainer {
+    align-items: center;
+  }
+}
