@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./HeroSection.module.css";
 import Image from "next/image";
 const HeroSection = () => {
@@ -13,17 +14,17 @@ const HeroSection = () => {
       <span className={styles.name}>Hi, I am Patrik Youssef</span>
       <span className={styles.title}>Frontend Developer</span>
       <div className={styles.btnContainer}>
-        <a
+        <Link
           href="/dummy.pdf"
           className={`${styles.linkBtn} ${styles.linkBtnPrimary}`}
           download="patrik_youssef_cv.pdf"
           type="application/pdf"
         >
           <span aria-label="Download Patrik Youssef CV">Download CV</span>
-        </a>
-        <a href="#contact" className={styles.linkBtn}>
+        </Link>
+        <Link href="#contact" className={styles.linkBtn}>
           <span>Contact me</span>
-        </a>
+        </Link>
       </div>
     </div>
   );

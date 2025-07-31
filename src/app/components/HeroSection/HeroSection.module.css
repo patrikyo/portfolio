@@ -29,19 +29,19 @@
 }
 
 .ctaBtn {
-  width: 143px;
-  height: 42px;
+  width: 8.9375rem;
+  height: 2.625rem;
   background-color: #171717;
-  border: 1px solid #fff;
+  border: 0.0625rem solid #fff;
   color: #fff;
   font-weight: 500;
   font-size: 1rem;
 }
 
 .linkBtn {
-  width: 143px;
-  height: 42px;
-  border: 1px solid #fff;
+  width: 8.9375rem;
+  height: 2.625rem;
+  border: 0.0625rem solid #fff;
   background-color: #171717;
   color: #fff;
   text-decoration: none;
@@ -61,6 +61,6 @@
 }
 
 .linkBtnPrimary:hover {
-  background-color: #14522e;
+  background-color: #1f894b;
   transition: background-color 0.5s ease-out;
 }
