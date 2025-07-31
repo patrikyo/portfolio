@@ -7,8 +7,10 @@ import fields from "@/app/data/fields";
 import Status from "@/app/models/enums/Status.enum";
 import { ClipLoader } from "react-spinners";
 import ContactInput from "@/app/models/interfaces/ContactInput.interface";
+import { useRouter } from "next/navigation";
 
 const Contact = () => {
+  const router = useRouter();
   const [formData, setFormData] = useState<ContactInput>({
     [ContactField.FirstName]: "",
     [ContactField.LastName]: "",
@@ -63,6 +65,7 @@ const Contact = () => {
           [ContactField.UserMessage]: "",
         });
         setIsLoading(false);
+        router.push("/thanks");
       })
       .catch(() => {
         setSubmitStatus(Status.Error);

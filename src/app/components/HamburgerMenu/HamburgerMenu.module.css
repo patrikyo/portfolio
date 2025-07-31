@@ -36,7 +36,7 @@
   border: 0;
   background: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   min-width: 5.25rem;
   cursor: pointer;
 }

@@ -18,28 +18,30 @@ export default function Home() {
     { title: "Contact", href: "#contact" },
   ];
   return (
-    <div className={styles.container}>
+    <>
       <div className={styles.headerContainer}>
         <Header />
         <Navigation links={links} />
       </div>
-      <HeroSection />
-      <section id="about">
-        <h2 className={styles.title}>About</h2>
-        <About personalInfo={personalInfo} />
-      </section>
-      <section id="projects">
-        <h2 className={styles.title}>Projects</h2>
-        <Project projects={projectsData} />
-      </section>
-      <section id="skills">
-        <h2 className={styles.title}>Skills</h2>
-        <Skills skills={skills} />
-      </section>
-      <section id="contact">
-        <h2 className={styles.title}>Get in touch</h2>
-        <Contact />
-      </section>
-    </div>
+      <div className={styles.container}>
+        <HeroSection />
+        <section id="about">
+          <h2 className={styles.title}>About</h2>
+          <About personalInfo={personalInfo} />
+        </section>
+        <section id="projects">
+          <h2 className={styles.title}>Projects</h2>
+          <Project projects={projectsData} />
+        </section>
+        <section id="skills">
+          <h2 className={styles.title}>Skills</h2>
+          <Skills skills={skills} />
+        </section>
+        <section id="contact">
+          <h2 className={styles.title}>Get in touch</h2>
+          <Contact />
+        </section>
+      </div>
+    </>
   );
 }

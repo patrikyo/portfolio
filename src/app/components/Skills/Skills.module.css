@@ -1,6 +1,6 @@
 .container {
   padding: 0 1rem;
-  border-bottom: 9px solid #1f1f1f;
+  border-bottom: 0.5625rem solid #1f1f1f;
 }
 
 .list {
@@ -16,7 +16,7 @@
   aspect-ratio: 1;
   margin: 0 auto;
   margin-top: 1rem;
-  max-width: 290px;
+  max-width: 18.125rem;
 }
 
 .figureContainer {
@@ -49,11 +49,11 @@
 @media screen and (min-width: 768px) {
   .listItem {
     flex: 50%;
-    max-width: 210px;
+    max-width: 13.125rem;
   }
 
   .container {
-    max-width: 1100px;
+    max-width: 68.75rem;
     margin: 0 auto;
   }
 }

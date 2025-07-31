@@ -1,7 +1,7 @@
 .contactInfoContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0.625rem;
   justify-content: flex-start;
   padding: 0 0.5rem;
 }
@@ -17,7 +17,7 @@
 .contactInfo {
   background-color: #171717;
   border: 0;
-  border-bottom: 2px solid #4f4f4f;
+  border-bottom: 0.125rem solid #4f4f4f;
   color: #fff;
   height: 2rem;
 }
@@ -29,7 +29,7 @@
 .contactInfo:focus {
   outline: none;
   transition: border-bottom 0.5s ease-out;
-  border-bottom: 2px solid #27ae60;
+  border-bottom: 0.125rem solid #27ae60;
 }
 
 .contactInputContainer:last-child {
@@ -37,28 +37,28 @@
 }
 
 .invalidContactInfo {
-  border-bottom: 2px solid red !important;
+  border-bottom: 0.125rem solid red !important;
   transition: border-bottom 0.5 ease-out;
 }
 
 .validContactInfo {
   border: 0;
-  border-bottom: 2px solid #4f4f4f;
+  border-bottom: 0.125rem solid #4f4f4f;
 }
 
 .sendBtn {
   display: block;
   box-sizing: content-box;
-  width: 143px;
-  height: 42px;
+  width: 8.9375rem;
+  height: 2.625rem;
   background-color: #27ae60;
-  border: 1px solid #27ae60;
+  border: 0.0625rem solid #27ae60;
   color: #fff;
   font-weight: 500;
 }
 
 .textArea {
-  border: 2px solid #4f4f4f;
+  border: 0.125rem solid #4f4f4f;
   padding: 1rem;
   font-family: "DM Sans", Arial, sans-serif;
 }
@@ -83,7 +83,7 @@
 }
 @media screen and (min-width: 768px) {
   .contactInfoContainer {
-    max-width: 753px;
+    max-width: 47.0625rem;
     margin: 0 auto;
     flex-direction: row;
     gap: 2rem;

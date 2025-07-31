@@ -1,6 +1,6 @@
 .container {
   padding: 0 1rem;
-  border-bottom: 9px solid #1f1f1f;
+  border-bottom: 0.5625rem solid #1f1f1f;
 }
 
 .aboutText {
@@ -45,7 +45,7 @@
   }
 
   .aboutText {
-    max-width: 800px;
+    max-width: 50rem;
     margin: 0 auto;
     margin-bottom: 1.5rem;
   }
@@ -53,7 +53,7 @@
 
 @media screen and (min-width: 992px) {
   .infoList {
-    max-width: 600px;
+    max-width: 37.5rem;
     margin-bottom: 3rem;
   }
 }
