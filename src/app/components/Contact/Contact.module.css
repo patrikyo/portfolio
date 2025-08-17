@@ -17,7 +17,7 @@
 .contactInfo {
   background-color: #171717;
   border: 0;
-  border-bottom: 0.125rem solid #4f4f4f;
+  border-bottom: 2px solid #4f4f4f;
   color: #fff;
   height: 2rem;
 }
@@ -29,7 +29,7 @@
 .contactInfo:focus {
   outline: none;
   transition: border-bottom 0.5s ease-out;
-  border-bottom: 0.125rem solid #27ae60;
+  border-bottom: 2px solid #27ae60;
 }
 
 .contactInputContainer:last-child {
@@ -37,13 +37,13 @@
 }
 
 .invalidContactInfo {
-  border-bottom: 0.125rem solid red !important;
+  border-bottom: 2px solid red !important;
   transition: border-bottom 0.5 ease-out;
 }
 
 .validContactInfo {
   border: 0;
-  border-bottom: 0.125rem solid #4f4f4f;
+  border-bottom: 2px solid #4f4f4f;
 }
 
 .sendBtn {
@@ -52,13 +52,13 @@
   width: 8.9375rem;
   height: 2.625rem;
   background-color: #27ae60;
-  border: 0.0625rem solid #27ae60;
+  border: 1px solid #27ae60;
   color: #fff;
   font-weight: 500;
 }
 
 .textArea {
-  border: 0.125rem solid #4f4f4f;
+  border: 2px solid #4f4f4f;
   padding: 1rem;
   font-family: "DM Sans", Arial, sans-serif;
 }

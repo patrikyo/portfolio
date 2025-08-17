@@ -48,7 +48,10 @@ const Contact = () => {
       body: form,
     };
     fetch("https://contact-api-3l0q.onrender.com/api/contacts", requestOptions)
-      .then(() => {
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error();
+        }
         setSubmitStatus(Status.Success);
         setFormData({
           [ContactField.FirstName]: "",

@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 import ClassNames from "embla-carousel-class-names";
 
@@ -31,7 +32,13 @@ const EmblaCarousel: React.FC<CarouselProps> = (props) => {
         <div className="embla__container">
           {images.map((img, i) => (
             <div className="embla__slide" key={i}>
-              <img className="embla__slide__img" src={img.src} alt={img.alt} />
+              <Image
+                className="embla__slide__img"
+                width={500}
+                height={500}
+                src={img.src}
+                alt={img.alt}
+              />
             </div>
           ))}
         </div>

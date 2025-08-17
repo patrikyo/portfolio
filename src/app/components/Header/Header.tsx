@@ -1,4 +1,3 @@
-import Link from "@/app/models/interfaces/Link.interface";
 import styles from "./Header.module.css";
 
 const Header = () => {

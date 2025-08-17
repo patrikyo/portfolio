@@ -18,7 +18,7 @@
 
 .image {
   border-radius: 50%;
-  border: 0.7rem solid #212121;
+  border: 12px solid #212121;
   margin: 0 auto;
 }
 
@@ -32,7 +32,7 @@
   width: 8.9375rem;
   height: 2.625rem;
   background-color: #171717;
-  border: 0.0625rem solid #fff;
+  border: solid #fff;
   color: #fff;
   font-weight: 500;
   font-size: 1rem;
@@ -41,7 +41,7 @@
 .linkBtn {
   width: 8.9375rem;
   height: 2.625rem;
-  border: 0.0625rem solid #fff;
+  border: 1px solid #fff;
   background-color: #171717;
   color: #fff;
   text-decoration: none;
