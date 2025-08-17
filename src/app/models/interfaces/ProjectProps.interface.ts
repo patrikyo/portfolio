@@ -1,4 +1,4 @@
-import ProjectData from "./Project.interface";
+import ProjectData from "./project.interface";
 
 interface ProjectProps {
   projects: ProjectData[];

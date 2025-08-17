@@ -6,8 +6,8 @@ import ContactField from "@/app/models/enums/ContactField.enum";
 import fields from "@/app/data/fields";
 import Status from "@/app/models/enums/Status.enum";
 import { ClipLoader } from "react-spinners";
-import ContactInput from "@/app/models/interfaces/ContactInput.interface";
 import { useRouter } from "next/navigation";
+import ContactInput from "@/app/models/interfaces/contactInput.interface";
 
 const Contact = () => {
   const router = useRouter();

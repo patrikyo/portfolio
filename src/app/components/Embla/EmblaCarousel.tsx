@@ -10,7 +10,7 @@ import {
   PrevButton,
   usePrevNextButtons,
 } from "./EmblaCarouselArrowButton";
-import CarouselProps from "@/app/models/interfaces/CarouselProps.interface";
+import CarouselProps from "@/app/models/interfaces/carouselProps.interface";
 
 const EmblaCarousel: React.FC<CarouselProps> = (props) => {
   const { images, options } = props;

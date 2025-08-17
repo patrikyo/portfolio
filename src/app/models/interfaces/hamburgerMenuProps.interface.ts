@@ -1,4 +1,4 @@
-import Link from "./Link.interface";
+import Link from "./link.interface";
 
 interface HamburgerMenuProps {
   links: Link[];

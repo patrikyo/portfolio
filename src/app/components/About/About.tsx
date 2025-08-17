@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./About.module.css";
-import AboutProps from "@/app/models/interfaces/AboutProps.interface";
+import AboutProps from "@/app/models/interfaces/aboutProps.interface";
 
 const About: React.FC<AboutProps> = ({ personalInfo }) => {
   return (

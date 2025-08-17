@@ -1,5 +1,5 @@
 import React from "react";
-import NavigationProps from "@/app/models/interfaces/NavigationProps.interface";
+import NavigationProps from "@/app/models/interfaces/navigationProps.interface";
 import styles from "./Navigation.module.css";
 import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import Link from "next/link";

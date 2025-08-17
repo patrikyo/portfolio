@@ -9,7 +9,7 @@ import personalInfo from "./data/personalInfo";
 import projectsData from "./data/projectsData";
 import skills from "./data/skills";
 import Navigation from "./components/Navigation/Navigation";
-import Link from "./models/interfaces/Link.interface";
+import Link from "./models/interfaces/link.interface";
 
 export default function Home() {
   const links: Link[] = [
