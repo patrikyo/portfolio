@@ -6,12 +6,17 @@ const About: React.FC<AboutProps> = ({ personalInfo }) => {
   return (
     <div className={styles.container}>
       <p className={styles.aboutText}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident
+        A frontend developer with a holistic view of system development. With a
+        masters degree in Computer and Systems Sciences from Stockholm
+        University and over seven years of experience as a frontend developer at
+        the Swedish Public Employment Service, I have a unique ability to see
+        the bigger picture. Im passionate about creating user-centered and
+        accessible web applications that are not only technically sound but also
+        provide an excellent user experience. My background as a systems
+        developer allows me to look beyond the code and understand how frontend,
+        backend, and user experience are interconnected. Ive played an active
+        role in the entire development lifecycle, from requirements analysis and
+        UX design to implementation and testing.
       </p>
       <ul
         className={styles.infoList}

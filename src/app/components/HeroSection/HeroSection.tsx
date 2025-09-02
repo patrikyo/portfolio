@@ -15,7 +15,7 @@ const HeroSection = () => {
       <span className={styles.title}>Frontend Developer</span>
       <div className={styles.btnContainer}>
         <Link
-          href="/dummy.pdf"
+          href="/patrikYoussefCV.pdf"
           className={`${styles.linkBtn} ${styles.linkBtnPrimary}`}
           download="patrik_youssef_cv.pdf"
           type="application/pdf"
