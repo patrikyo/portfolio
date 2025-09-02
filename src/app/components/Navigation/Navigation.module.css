@@ -15,17 +15,6 @@
     padding: 0;
   }
 
-  .link {
-    color: #fff;
-    text-decoration: none;
-  }
-
-  .link:hover {
-    color: #27ae60;
-    border-bottom: 3px solid #27ae60;
-    transition: color 1s ease-out, border 1s ease-out;
-  }
-
   .listItem {
     min-width: 5rem;
   }

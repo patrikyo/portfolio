@@ -33,7 +33,13 @@ const About: React.FC<AboutProps> = ({ personalInfo }) => {
             />
             <div className={styles.infoContent}>
               <span className={styles.infoLabel}>{ele.label}</span>
-              <span className={styles.infoValue}>{ele.value}</span>
+              {ele.link ? (
+                <a className="link" href={ele.value}>
+                  {ele.label} profile
+                </a>
+              ) : (
+                <span className={styles.infoValue}>{ele.value}</span>
+              )}
             </div>
           </li>
         ))}

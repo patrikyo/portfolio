@@ -25,8 +25,9 @@ const Project: React.FC<ProjectProps> = ({ projects }) => {
                 aria-hidden="true"
                 className={styles.externalLinkIcon}
               />
-              {ele.title} <span>(Free hosting, may be slow to load)</span>
+              {ele.title}
             </Link>
+            (Free hosting, may be slow to load)
           </div>
           <div className={styles.imageContainer}>
             <EmblaCarousel images={ele.images} />

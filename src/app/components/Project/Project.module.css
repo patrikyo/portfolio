@@ -30,13 +30,17 @@
   display: flex;
   gap: 0.2rem;
   align-items: center;
-  margin-bottom: 2rem;
+  justify-content: center;
 }
 
 .externalLinkIcon {
   color: #27ae60;
   width: 1.1rem;
   height: 1.1rem;
+}
+
+.imageContainer {
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 768px) {

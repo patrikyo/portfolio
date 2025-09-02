@@ -4,6 +4,7 @@ interface PersonalInfoItem {
   label: string;
   value: string;
   icon: IconDefinition;
+  link: boolean;
 }
 
 export default PersonalInfoItem;

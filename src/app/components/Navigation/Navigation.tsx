@@ -14,7 +14,7 @@ const Navigation: React.FC<NavigationProps> = ({ links }) => {
         <ul className={styles.listContainer}>
           {links.map((link) => (
             <li className={styles.listItem} key={link.href}>
-              <Link className={styles.link} href={link.href}>
+              <Link className="link" href={link.href}>
                 {link.title}
               </Link>
             </li>
