@@ -25,7 +25,7 @@ const Project: React.FC<ProjectProps> = ({ projects }) => {
                 aria-hidden="true"
                 className={styles.externalLinkIcon}
               />
-              {ele.title}
+              {ele.title} <span>(Free hosting, may be slow to load)</span>
             </Link>
           </div>
           <div className={styles.imageContainer}>

@@ -31,7 +31,7 @@ const projectsData: ProjectData[] = [
         alt: "Skärmbild som visar hur användarens bevakningslista ser ut när den är tom, med en uppmaning att lägga till aktier.",
       },
     ],
-    url: "https://github.com/patrikyo/stock-fe",
+    url: "https://stockdata-k09z.onrender.com",
   },
   {
     title: "Tayo",
@@ -59,7 +59,7 @@ const projectsData: ProjectData[] = [
         alt: "Tack-sidan som visas efter att en besökare har skickat in kontaktformuläret, vilket bekräftar att deras meddelande har mottagits.",
       },
     ],
-    url: "https://github.com/patrikyo/elevator",
+    url: "https://tayo.onrender.com",
   },
 ];
 
